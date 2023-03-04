@@ -1,27 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 const Home = () => {
-  const posts =[
-    {
-      id: 1,
-      title: "Hello 1",
-      des: "This is Hello 1sfgdhggfdsadfdghgjhgfgdgfdfsdsadsfdgfhgjhgfsdasfdgfhjkjlk;lkjhgfddafsgdhfjgkhl;jlk",
-      img: "https://i.pinimg.com/564x/ba/ac/8e/baac8e90fcd499f6299aa8ffe7b32faf.jpg",
-    },
-    {
-      id: 2,
-      title: "Hello 2",
-      des: "This is Hello 2 This is Hello 1sfgdhggfdsadfdghgjhgfgdgfdfsdsadsfdgfhgjhgfsdasfdgfhjkjlk;lkjhgfddafsgdhfjgkhl;jlk",
-      img: "https://i.pinimg.com/564x/8d/2c/f3/8d2cf3e0ae10d89dc33bb75406b444b7.jpg",
-    },
-    {
-      id: 3,
-      title: "Hello 3",
-      des: "This is Hello 3 This is Hello 1sfgdhggfdsadfdghgjhgfgdgfdfsdsadsfdgfhgjhgfsdasfdgfhjkjlk;lkjhgfddafsgdhfjgkhl;jlk",
-      img: "https://i.pinimg.com/736x/4e/f4/ac/4ef4aceb1d06cdaab6f2d5c8d20d14a7.jpg",
-    }
-  ];
+  const [posts, setPosts] = useState([]);
+
+  const cat = useLocation().search;
+  useEffect(() => {
+    axios.get(`/post${cat}`)
+      .then((res) => {
+        setPosts(res.data.results);
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
+  }, [cat]);
+
   return (
     <div className='home'>
       <div className="posts">
@@ -33,7 +29,7 @@ const Home = () => {
             <div className="content">
               <Link className='link' to={`/post/${post.id}`}>
                 <h1>{post.title}</h1>
-                <p>{post.des}</p>
+                <p>{post.desc}</p>
                 <button>Read more</button>
               </Link>
             </div>
