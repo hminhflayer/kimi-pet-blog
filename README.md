@@ -28,17 +28,19 @@ This project was built using these technologies.
 Clone down this repository. You will need `Node.js` `MySql` and `Git` installed globally on your machine.
 
 ## 🛠 Installation and Setup Instructions
-1. `cd ./api`
+1. Run: `cd ./api`
 
 2. Installation: `npm install`
 
 3. In the project directory, you can run: `npm start` start server API
 
-4. `cd ..` and `cd ./client`
+4. Run: `cd ..`
 
-1. Installation: `npm install`
+5. Run: `cd ./client`
 
-2. In the project directory, you can run: `npm start` start Frontend for client
+6. Installation: `npm install`
+
+7. In the project directory, you can run: `npm start` start Frontend for client
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
