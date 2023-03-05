@@ -1,6 +1,6 @@
 <h2 align="center">
   Kimi Pet Website - v1.0<br/>
-  <i>This is my blog and reference Lamba Dev</i>
+  <i>This is my blog</i>
 </h2>
 <br/>
 
@@ -52,3 +52,5 @@ You will find all the components used and you can edit your information accordin
 ### Show your support
 
 Give a ⭐ if you like this website!
+
+#### Reference: Lamba Dev
