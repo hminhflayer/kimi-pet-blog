@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Menu from '../components/Menu';
 import Edit from '../img/edit.png';
 import Delete from '../img/delete.png';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
 import moment from 'moment';
@@ -11,8 +11,10 @@ import { AuthContext } from '../context/authContext';
 
 const Single = () => {
   const [post, setPost] = useState({});
+  const [err, setError] = useState(null);
 
   const location = useLocation();
+  const navigate = useNavigate();
   const postId = location.pathname.split('/')[2];
   const { currentUser } = useContext(AuthContext);
 
@@ -37,27 +39,32 @@ const Single = () => {
       });; 
   }
 
+  const getHTML = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    return doc.body.textContent;
+  }
+
   return (
     <div className='single'>
       <div className='content'>
-        <img src={post?.img} alt={post.title} />
+        <img src={`../upload/${post?.img}`} alt={post.title} />
         <div className='user'>
-          <img src={post?.avt} alt="" />
+          <img src={`..upload/${post?.avt}`} alt="" />
           <div className='info'>
             <span>{post.username}</span>
             <p>Posted {moment(post.date).fromNow()}</p>
           </div>
           { currentUser?.username === post?.username && <div className='edit'>
-              <Link to={`/write?edit=123`}>
+              <Link to={`/write?edit=${postId}`} state={post}>
                 <img src={Edit} alt="Edit" />
               </Link>
               <img onClick={handleDelete} src={Delete} alt="Delete" />
             </div>}
         </div>
         <h2>{post.title}</h2>
-        <span>{post.desc}</span>
+        <span>{getHTML(post.desc)}</span>
       </div>
-      <Menu />
+      <Menu cat={post.cat}/>
     </div>
   )
 }
