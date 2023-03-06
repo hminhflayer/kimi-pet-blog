@@ -1,4 +1,4 @@
-$lightGreen: #b9e7e7;
+$lightGreen: #a7d1f5;
 
 .app{
     display: flex;
@@ -22,7 +22,7 @@ $lightGreen: #b9e7e7;
 
             h1{
                 font-size: 20pt;
-                color: teal;
+                color: #30ACE1;
                 margin-bottom: 20px;
             }
 
@@ -43,7 +43,7 @@ $lightGreen: #b9e7e7;
             button{
                 padding: 10px;
                 border: none;
-                background-color: teal;
+                background-color: #30ACE1;
                 cursor: pointer;
                 color: white;
             }
@@ -75,11 +75,15 @@ $lightGreen: #b9e7e7;
             .links{
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 50px;
 
                 h6{
                     font-size: 16px;
                     font-weight: 300;
+
+                    &:hover{
+                        font-weight: bolder;
+                    }
                 }
 
                 span{
@@ -95,12 +99,12 @@ $lightGreen: #b9e7e7;
                     align-items: center;
                     justify-content: center;
                     font-weight: 300;
-                    border: 1px solid white;
+                    border: 3px solid white;
 
                     &:hover{
-                        color: teal;
+                        color: #30ACE1;
                         background-color: white;
-                        border: 1px solid teal;
+                        border: 3px solid #30ACE1;
                     }
                 }
             }
@@ -111,7 +115,7 @@ $lightGreen: #b9e7e7;
     footer{
         margin-top: 100px;
         padding: 20px;
-        background-color: $lightGreen;
+        background-color: #cadff2;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -166,7 +170,7 @@ $lightGreen: #b9e7e7;
                     justify-content: space-between;
 
                     h1{
-                        font-size: 48px;
+                        font-size: 26px;
                     }
 
                     p{
@@ -180,11 +184,11 @@ $lightGreen: #b9e7e7;
                         border: none;
                         cursor: pointer;
                         background-color: white;
-                        border: 1px solid teal;
-                        color: teal;
+                        border:3px solid #30ACE1;
+                        color: #30ACE1;
 
                         &:hover{
-                            border: 1px solid white;
+                            border: 3px solid white;
                             background-color: $lightGreen;
                             color: black;
                         }
@@ -281,9 +285,9 @@ $lightGreen: #b9e7e7;
                     padding: 7.5px 15px;
                     border: none;
                     cursor: pointer;
-                    color: teal;
+                    color: #30ACE1;
                     background-color: white;
-                    border: 1px solid teal;
+                    border: 1px solid #30ACE1;
 
                     &:hover {
                         border: 1px solid white;
@@ -356,17 +360,17 @@ $lightGreen: #b9e7e7;
 
                     :first-child{
                         cursor: pointer;
-                        color: teal;
+                        color: #30ACE1;
                         background-color: white;
-                        border: 1px solid teal;
+                        border: 1px solid #30ACE1;
                         padding: 3px 5px;
                     }
 
                     :last-child{
                         cursor: pointer;
                         color: white;
-                        background-color: teal;
-                        border: 1px solid teal;
+                        background-color: #30ACE1;
+                        border: 1px solid #30ACE1;
                         padding: 3px 5px;
                     }
                 }
@@ -375,7 +379,7 @@ $lightGreen: #b9e7e7;
                     display: flex;
                     align-items: center;
                     gap: 2px;
-                    color: teal;
+                    color: #30ACE1;
                 }
             }
         }
