@@ -2,7 +2,7 @@
   Kimi Pet Website - v1.0<br/>
   <i>This is my blog</i>
 </h2>
-## Demo
+### Demo
 <div align="center">
   <img alt="Demo 1" src="./image/demo1.png" />
 </div>
