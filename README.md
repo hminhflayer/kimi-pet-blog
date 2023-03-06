@@ -2,6 +2,16 @@
   Kimi Pet Website - v1.0<br/>
   <i>This is my blog</i>
 </h2>
+
+<div align="center">
+  <img alt="Demo 1" src="./image/demo1.png" />
+</div>
+<div align="center">
+  <img alt="Demo 2" src="./image/demo2.png" />
+</div>
+<div align="center">
+  <img alt="Demo 3" src="./image/demo3.png" />
+</div>
 <br/>
 
 ## Built With
